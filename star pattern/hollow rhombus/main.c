@@ -9,13 +9,13 @@ int main()
     {
         for (int j = 1; j <= rows - i; j++)
         {
-            printf(" ");
+            printf("  ");
         }
         for(int j = 1; j <= rows; j++){
             if((j==1) || (j == rows) || (i == 1) || (i == rows))
-                printf("*");
+                printf("* ");
             else
-                printf(" ");
+                printf("  ");
         }
         printf("\n");
     }
