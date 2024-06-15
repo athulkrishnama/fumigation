@@ -1,7 +1,7 @@
 package say.hello;
 
 public class Hello {
-    void say(){
+    public void say(){
         System.out.println("Hello ");
     }
 }
