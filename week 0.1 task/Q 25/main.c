@@ -2,21 +2,20 @@
 
 int main()
 {
-	int i, j, k,row;
-	printf("Enter number of rows: ");
-	scanf("%d", &row);
-	
-	for(i = 1; i <= row; i++)
-	{
-		for(j = 1; j <= i * 2; j++)
-		{
-			printf("* ");
-		}
-		printf("\n");
-		if( i == row) break;
-		for(k = 1; k <= i * 3; k++)
-		{
-			printf("*\n");
-		}
+	int arr[] = {7,3,5,7,9,0,3,5,8,9,2,3,5,3,9,7,5,5,4,3,5,1,0,3,0,5,1,0,3,4,1,0,5,3,0,9,4,9,4,9,2,3,9,0,5,8,3,3,8,3,6,2,5,8,9,0,2,3,7,5,7,8,9,2,3,7,5,8,3,8,9,7,3,8,9,5,7,2,3,8,9,8,9,3,7,5,7,3,5,9,2,3,6,8,9,5,0,9,2,7,8,9,3,5,8,9,0,3,9,5,3,9,3,2,3,9,8,2,3,4,8,0,9,3,5,3,5,9,3,7,5,3,5,7,3,5,3,5,3,7,8,9,3}, i, j, len, l, pattern[200];
+	len = sizeof(arr) / sizeof(arr[0]);
+	l = 0;
+	for(i = 0; i < len; i++){
+		pattern[l++] = arr[i];
+		if((arr[i] % 2)) i+=2;
 	}
+	l = 0;
+	for(i = 1; i <= 3; i++){
+		for( j = 1; j <= i * 2; j++)printf("%d ", pattern[l++]);
+		printf("\n");
+		if(i == 3)break;
+		for(j = 1; j <= i * 3; j++) printf("%d\n", pattern[l++]);
+	}
+	
+	
 }
